@@ -17,7 +17,7 @@ class TSNEOptimizer:
         self.id = random.randint(0, 1000000)
 
     def fit(self, X) -> None:
-        model = TSNE(**self.param_grid)
+        model = TSNE(n_components=3, **self.param_grid)
         _ = model.fit_transform(X)
 
         self.kl_div = model.kl_divergence_
