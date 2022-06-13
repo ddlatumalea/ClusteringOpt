@@ -28,7 +28,7 @@ def plot_distribution(data, rows, cols):
         ax.text(median*1.1, max_ylim*0.7, 'Median: {:.4f}'.format(median)) 
         
     plt.show()
-    
+
 def scree_plot(pca: PCA):
     x = np.arange(pca.n_components_) + 1
     
@@ -38,7 +38,7 @@ def scree_plot(pca: PCA):
     plt.ylabel('Explained variance')
     
     plt.show()
-    
+
 def component_plot(pca_comp1, pca_comp2, y, title):
     pc1, xlabel = pca_comp1
     pc2, ylabel = pca_comp2
